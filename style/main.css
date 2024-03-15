@@ -21,7 +21,7 @@ body {
   width: 100vw;
 }
 
-.container > div {
+.container>div {
   left: 0;
   position: absolute;
   right: 0;
@@ -86,14 +86,15 @@ body {
   font-size: 4rem;
 }
 
-.idea-5 span, .idea-6 span, .wish-hbd span {
+.idea-5 span,
+.idea-6 span,
+.wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span{
+.idea-6 span {
   font-size: 15rem;
 }
-
 
 .six {
   position: relative;
@@ -133,7 +134,8 @@ body {
   left: 30%;
 }
 
-.seven, .eight {
+.seven,
+.eight {
   height: 100vh;
   position: fixed;
   top: 0;
@@ -220,6 +222,10 @@ body {
   font-weight: lighter;
 }
 
+.hidden {
+  display: none;
+}
+
 #replay {
   cursor: pointer;
   z-index: 3;
@@ -228,65 +234,65 @@ body {
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
-    left: 40%;
+      left: 40%;
   }
 }
 
 @media screen and (max-height: 800px) {
   .six .hat {
-    left: 37%;
+      left: 37%;
   }
 }
 
 @media screen and (max-height: 700px) {
   .six .hat {
-    left: 32%;
+      left: 32%;
   }
 }
 
 @media screen and (max-height: 850px) and (max-width: 450px) {
   .six .hat {
-    left: 32%;
+      left: 32%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .container {
-    width: 90%;
+      width: 90%;
   }
 
   .four .text-box {
-    width: 90%;
+      width: 90%;
   }
 
   .text-box .fake-btn {
-    bottom: -38px;
-    right: 5px;
+      bottom: -38px;
+      right: 5px;
   }
 
   .idea-5 span {
-    display: block;
+      display: block;
   }
 
   .idea-6 span {
-    font-size: 10rem;
+      font-size: 10rem;
   }
 
   .six .hat {
-    /* top: -20px; */
-    width: 50px;
+      /* top: -20px; */
+      width: 50px;
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+      font-size: 2.2em;
   }
 
   .wish h5 {
-    font-size: 1.4rem;
+      font-size: 1.4rem;
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+      font-size: 1.5rem;
+      font-weight: lighter;
   }
 }

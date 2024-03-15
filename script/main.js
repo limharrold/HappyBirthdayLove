@@ -46,7 +46,7 @@ const animationTimeline = () => {
         rotationY: 5,
         skewX: "-15deg"
     }
-
+    
     // timeline
     const tl = new TimelineMax();
 
@@ -114,7 +114,7 @@ const animationTimeline = () => {
         },
     "+=1")
     .from(".idea-1", 0.7, ideaTextTrans)
-    .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
+    .to(".idea-1", 0.7, ideaTextTransLeave, "+=3.5")
     .from(".idea-2", 0.7, ideaTextTrans)
     .to(".idea-2", 0.7, ideaTextTransLeave, "+=2.5")
     .from(".idea-3", 0.7, ideaTextTrans)
@@ -264,9 +264,35 @@ const animationTimeline = () => {
         "+=1"
     );
 
+    // Show "Click me" button at the end
+    tl.add(() => {
+        const clickMeButton = document.createElement('button');
+        clickMeButton.innerText = 'Click me for another Surprise!';
+        clickMeButton.className = 'click-me-btn';
+        clickMeButton.style.position = 'absolute';
+        clickMeButton.style.bottom = '160px';
+        clickMeButton.style.left = '50%';
+        clickMeButton.style.transform = 'translateX(-50%)';
+        clickMeButton.style.padding = '10px 20px';
+        clickMeButton.style.fontSize = '1.2rem';
+        clickMeButton.style.backgroundColor = '#ff69b4';
+        clickMeButton.style.color = '#fff';
+        clickMeButton.style.border = 'none';
+        clickMeButton.style.borderRadius = '5px';
+        clickMeButton.style.cursor = 'pointer';
+        clickMeButton.addEventListener('click', () => {
+            window.open('https://limharrold.github.io/FlowersLove/', '_blank');
+        });
+        document.body.appendChild(clickMeButton);
+        const replayBtn = document.getElementById("replay");
+        replayBtn.addEventListener("click", () => {
+          clickMeButton.style.display = 'none';
+        });
+    }, "+=0.5");
+
     // Restart Animation on click
-    const replyBtn = document.getElementById("replay");
-    replyBtn.addEventListener("click", () => {
+    const replayBtn = document.getElementById("replay");
+    replayBtn.addEventListener("click", () => {
         tl.restart();
     });
 }
